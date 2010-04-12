@@ -17,7 +17,7 @@ IUSE="gtk libnotify webinterface"
 
 DEPEND=">=virtual/python-2.5
 	|| ( app-arch/xz-utils app-arch/lzma-utils )
-	=net-libs/rb_libtorrent-0.14.9[python]
+	>=net-libs/rb_libtorrent-0.14.9[python]
 	dev-python/setuptools"
 RDEPEND="${DEPEND}
 	dev-python/chardet
@@ -37,6 +37,10 @@ RDEPEND="${DEPEND}
 
 pkg_setup() {
 	append-ldflags $(no-as-needed)
+}
+
+src_prepare() {
+	epatch ${FILESDIR}/${P}-versionsplit.patch
 }
 
 src_install() {
