@@ -38,6 +38,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-autotools.patch
 	epatch "${FILESDIR}"/${P}-buffer-overflow.patch
 	epatch "${FILESDIR}"/${P}-qa-fix-undefined.patch
+	epatch "${FILESDIR}"/${P}-fix-cflags-stripping.patch
 	# bug 214799
 	epatch "${FILESDIR}"/${P}-neon-0.28.patch
 
