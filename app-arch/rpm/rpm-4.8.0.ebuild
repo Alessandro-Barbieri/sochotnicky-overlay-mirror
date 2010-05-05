@@ -41,6 +41,10 @@ src_prepare() {
 	AT_NO_RECURSIVE="yes" eautoreconf
 }
 
+src_compile() {
+	emake || die "emake failed"
+}
+
 src_configure() {
 	econf \
 		--without-selinux \
