@@ -12,7 +12,7 @@ SRC_URI="http://rpm.org/releases/rpm-4.8.x/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 
 IUSE="nls python doc sqlite capabilities lua acl"
 
@@ -41,7 +41,7 @@ src_prepare() {
 	AT_NO_RECURSIVE="yes" eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		--without-selinux \
 		--with-external-db \
@@ -53,8 +53,6 @@ src_compile() {
 		$(use_with capabilities cap)\
 		$(use_with acl)\
 		|| die "econf failed"
-#	emake -j1 || die "emake failed"
-	emake || die "emake failed"
 }
 
 src_install() {
@@ -85,4 +83,3 @@ pkg_postinst() {
 
 	distutils_pkg_postinst
 }
-
