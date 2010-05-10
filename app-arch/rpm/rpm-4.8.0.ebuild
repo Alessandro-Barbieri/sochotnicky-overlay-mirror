@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.8.0.ebuild,v 1.3 2010/05/06 22:45:44 sochotnicky Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
-IUSE="nls python doc sqlite capabilities lua acl"
+IUSE="nls python doc sqlite caps lua acl"
 
 RDEPEND="=sys-libs/db-4.5*
 	>=sys-libs/zlib-1.2.3-r1
@@ -29,7 +29,7 @@ RDEPEND="=sys-libs/db-4.5*
 	sqlite? ( >=dev-db/sqlite-3.3.5 )
 	lua? ( >=dev-lang/lua-5.1.0 )
 	acl? ( virtual/acl )
-	capabilities? ( >=sys-libs/libcap-2.0 )"
+	caps? ( >=sys-libs/libcap-2.0 )"
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
@@ -37,8 +37,9 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-autotools.patch
+	epatch "${FILESDIR}"/${P}-db-path.patch
 
-	AT_NO_RECURSIVE="yes" eautoreconf
+	eautoreconf
 }
 
 src_compile() {
@@ -54,7 +55,7 @@ src_configure() {
 		$(use_enable sqlite sqlite3) \
 		$(use_enable nls) \
 		$(use_with lua) \
-		$(use_with capabilities cap)\
+		$(use_with caps cap)\
 		$(use_with acl)\
 		|| die "econf failed"
 }
@@ -69,7 +70,7 @@ src_install() {
 
 	keepdir /usr/src/rpm/{SRPMS,SPECS,SOURCES,RPMS,BUILD}
 
-	dodoc CHANGES CREDITS GROUPS README* RPM*
+	dodoc CHANGES CREDITS GROUPS README*
 	use doc && dohtml -r apidocs/html/*
 
 	# Fix perllocal.pod file collision
