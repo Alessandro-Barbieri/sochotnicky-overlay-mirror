@@ -16,6 +16,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-python/pytrailer"
+DEPEND=">=dev-python/pytrailer-0.2"
 RDEPEND=""
 RESTRICT_PYTHON_ABIS="3.*"

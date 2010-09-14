@@ -7,15 +7,15 @@ SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
 
-DESCRIPTION="Fast, pure-Python database engine, using a syntax that Python programmers should find very intuitive"
-HOMEPAGE="http://code.google.com/p/pyqtrailer/"
-SRC_URI="http://pypi.python.org/packages/source/p/pyqtrailer/${P}.tar.gz"
+DESCRIPTION="Module to simplify access to movies on apple.com/trailers"
+HOMEPAGE="http://code.google.com/p/pytrailer/"
+SRC_URI="http://pypi.python.org/packages/source/p/pytrailer/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-python/pytrailer"
+DEPEND=""
 RDEPEND=""
 RESTRICT_PYTHON_ABIS="3.*"

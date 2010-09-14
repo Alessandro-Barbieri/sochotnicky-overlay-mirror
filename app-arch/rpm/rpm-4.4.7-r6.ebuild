@@ -25,7 +25,7 @@ RDEPEND=">=sys-libs/db-4
 	perl? ( >=dev-lang/perl-5.8.8 )
 	nls? ( virtual/libintl )
 	sqlite? ( >=dev-db/sqlite-3.3.5 )
-	>=net-misc/neon-0.28"
+	>=net-libs/neon-0.28"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	doc? ( app-doc/doxygen )"
