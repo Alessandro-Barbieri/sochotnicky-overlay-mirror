@@ -4,10 +4,11 @@
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
-DESCRIPTION="Fast, pure-Python database engine, using a syntax that Python programmers should find very intuitive"
+DESCRIPTION="Qt4 application for downloading trailers from apple.com"
 HOMEPAGE="http://code.google.com/p/pyqtrailer/"
 SRC_URI="http://pypi.python.org/packages/source/p/pyqtrailer/${P}.tar.gz"
 
@@ -16,6 +17,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-python/pytrailer-0.3 PyQt4"
-RDEPEND=""
-RESTRICT_PYTHON_ABIS="3.*"
+DEPEND=">=dev-python/pytrailer-0.3
+		dev-python/PyQt4"
+RDEPEND="$DEPEND"
