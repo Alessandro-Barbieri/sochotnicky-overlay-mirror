@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>sochotnicky@gentoo.org</email>
+		<name>Stanislav Ochotnicky</name>
+	</maintainer>
+	<longdescription lang="en">
+		This package forms the core of Kitchen. It contains some useful modules
+		for using newer python standard library modules on older python
+		versions, text manipulation, PEP 386 versioning, and initializing
+		gettext.
+	</longdescription>
+</pkgmetadata>
