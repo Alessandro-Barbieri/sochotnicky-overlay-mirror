@@ -1,0 +1,20 @@
+# ChangeLog for dev-python/bugzilla
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  18 Oct 2013; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  bugzilla-0.9.0-r1.ebuild:
+  Update dependency on pycurl to use EAPI5
+
+*bugzilla-0.9.0-r1 (16 Oct 2013)
+
+  16 Oct 2013; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  -bugzilla-0.9.0.ebuild, +bugzilla-0.9.0-r1.ebuild:
+  Install bz-api-notes.txt and HACKING as docs
+
+*bugzilla-0.9.0 (16 Oct 2013)
+
+  16 Oct 2013; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  +bugzilla-0.9.0.ebuild, +metadata.xml:
+  Initial packaging of 0.9
+
