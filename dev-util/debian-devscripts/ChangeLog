@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/debian-devscripts
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*debian-devscripts-2.15.1 (27 Jan 2015)
+
+  27 Jan 2015; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  +debian-devscripts-2.15.1.ebuild, +metadata.xml:
+  Initial minimal version of debian devscripts
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>sochotnicky@gentoo.org</email>
+		<name>Stanislav Ochotnicky</name>
+	</maintainer>
+	<use>
+		<flag name="licensecheck">Install script to help with source license review</flag>              
+		<flag name="checkbashisms">Install script to check for bash-specific constructs in sh scripts</flag>              
+	</use>
+</pkgmetadata>
+
